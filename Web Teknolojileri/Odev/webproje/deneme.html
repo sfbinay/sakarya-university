@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="js/jquery-3.4.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <title>Örnekler</title>
+
+
+<script type="text/javascript">    $(document).ready(function(){        $("#btn1").click(function() {            var k_ad=$("#kAd").val();            var psw=$("#psw").val();            var pswT=$("#pswT").val();            if(k_ad==null||k_ad==""){                $("#mesaj").text("Kullanıcı adını giriniz");                $("#mesaj").slideDown("slow");}            else if(psw==null||psw==""){                $("#mesaj").slideUp("slow",                function() {                    $("#mesaj").text("Parola giriniz");                });                $("#mesaj").slideDown("slow");            }
+else if(pswT==null||pswT=="") {                $("#mesaj").slideUp("slow", function() {                            $("#mesaj").text("Parola Tekrarını giriniz");                        });                $("#mesaj").slideDown("slow");            }else if(psw!=pswT) {                $("#mesaj").slideUp("slow",function()  {                            $("#mesaj").text("Parolalar aynı olmalıdır...");                        });                $("#mesaj").slideDown("slow");            } else $("#form1").submit();        });
+$("#psw").keyup(function() {    var harfler = "abcdefABCDEF";    var rakamlar = "0123456789";    var semboller = ".,;:?*";    var psw = $("#psw").val();    var h = 0, r = 0, s = 0, u = 0;    var uzunluk = psw.length;    if (uzunluk > 8) u = 1;    for (i = 0; i < uzunluk; i++) {    var karakter = psw.charAt(i);    if (harfler.indexOf(karakter) != -1) h = 1;    if (rakamlar.indexOf(karakter) != -1) r = 1;  if (semboller.indexOf(karakter) != -1) s = 1;    }    toplam = u + h + r + s;    uz = toplam * 120+"px";    $("#guvenlik").css("height","20px");    $("#guvenlik").hide("slow",function(){        $("#guvenlik").css("width",uz);});
+  if (toplam == 1) {        $("#guvenlik").hide("slow",function(){        $("#guvenlik").css("background-color","red");}); 
+}else if (toplam == 2) {        $("#guvenlik").hide("slow",function(){        $("#guvenlik").css("background-color","yellow");});
+}else if (toplam == 3) {        $("#guvenlik").hide("slow",function(){        $("#guvenlik").css("background-color","blue");});}else if (toplam == 4) {        $("#guvenlik").hide("slow",function(){        $("#guvenlik").css("background-color","chartreuse");});}    $("#guvenlik").show("slow");});
+});</script>
+
+</head>
+<body>
+
+<form action="kayit.php" method="post" name="form1" id="form1"><div class="container">    <div class="row">        <div class="col-md-6 text-right">Kullanıcı Adı</div>        <div class="col-md-6">            <input type="text" name="kAd" id="kAd" class="bg-info">        </div>    </div>    <div class="row">        <div class="col-md-6 text-right">Parola</div>        <div class="col-md-6">            <input type="password" name="psw" id="psw" class="bg-info">        </div>    </div>    <div class="row">        <div class="col-md-6 text-right">Parola Tekrarı</div>        <div class="col-md-6">            <input type="password" name="pswT" id="pswT" class="bg-warning">        </div>    </div>
+    <div class="row">        <div class="col-md-6">            <div id="mesaj" class="bg-danger text-right"></div>        </div>        <div class="col-md-12">            <div id="guvenlik"></div>        </div>    </div>    <div class="row">        <div class="col-md-6"></div>        <div class="col-md-6">             <input type="button" name="btn1" id="btn1" class="bg-danger" value="Kaydet">        </div>    </div></div></form>
+
+
+
+
+
+</body>
+</html>                        

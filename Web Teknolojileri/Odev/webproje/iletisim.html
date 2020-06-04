@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+	<meta charset="UTF-8">
+	<title>İletişim</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/stillerim.css">
+		
+</head>
+<body>
+	<div class="container">
+	<div class="row">
+	
+	<div class="col-sm-3" id="baslik">
+	<a href="index.html" class="degistir-link">Hakkımda</a></div>
+	
+	<div class="col-sm-3" id="baslik">
+	<a href="sehrim.html" class="degistir-link">Şehrim</a></div>
+	
+	<div class="col-sm-3" id="baslik">
+	<a href="takimimiz.html" class="degistir-link">Takımımız</a></div>
+	
+	<div class="col-sm-3" id="baslik">
+	<a href="iletisim.html" class="degistir-link">İletişim</a></div>
+	
+	</div>
+</div>
+
+<div class="container">
+<p><br>Burada şehrim, takımım veya benim hakkımda yorumlarda bulunabilirsiniz.</p>
+</div>	
+
+
+
+
+<div class="container">
+	<br>
+	<div class="col-md-6" class="form-group">	
+		<form action="" method="POST">
+		
+		<div class="row">
+			<div class="col-md-6">
+			<label>Ad</label>
+			<input class="form-control" type="text" name="isim">	
+			</div>
+			<div class="col-md-6">
+			<label>Soyad</label>
+			<input class="form-control" type="text" name="Soyad">
+			</div>
+		</div>
+		<label>E-Posta</label>
+		<input class="form-control" type="email" name="email">
+		<label>Telefon</label>
+		<input class="form-control" type="number" name="tel">
+		<label>Doğum Tarihi</label>
+		<input class="form-control" type="date" name="dt">
+		<label>Cinsiyet</label>
+			<div class="row">
+				<div class="col-md-4 custom-control custom-checkbox">
+				<input type="checkbox" class="custom-control-input" id="customCheck1">
+				<label class="custom-control-label" for="customCheck1">Erkek</label>	
+				</div>
+				<div class="col-md-4 custom-control custom-checkbox">
+				<input type="checkbox" class="custom-control-input" id="customCheck2">
+				<label class="custom-control-label" for="customCheck2">Kadın</label>	
+				</div>				
+			</div>
+		<select class="form-control" name="cinsiyet">
+			<option>Erkek</option>
+			<option>Kadın</option>
+		</select>
+		<label>Yorum Türü</label>
+		<textarea class="form-control" name="aciklama" type="text"></textarea>
+		<br>
+		<button type="submit" name="gonder" class="btn btn-success">Gönder</button>
+		<button type="button" name="temile" class="btn btn-danger">Temizle</button>
+		</form>
+	</div>
+</div>
+
+
+
+	
+
+</body>
+</html>
