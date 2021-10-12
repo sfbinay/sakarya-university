@@ -1,5 +1,5 @@
 # sakarya-university
-Yazılım Ödevlerim(My Software Homeworks)
+## Yazılım Ödevlerim(My Software Homeworks)
 
 Bu repo sakarya üniversitesinde öğrenciyken yaptığım ödevleri içerir.
 Her ödev dosyasının içinde ödevin ne olduğu hakkında bir döküman vardır.
